@@ -1,4 +1,4 @@
-# Soccer Wall BLE Integration
+# Wall BLE Integration
 
 This project covers Bluetooth Low Energy (BLE) integration into the wall. Features include sending / receiving data with a phone app, error / missing packet detection and queues that hold 60 objects each.
 
