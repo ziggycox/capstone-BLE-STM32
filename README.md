@@ -1,6 +1,6 @@
 # Soccer Wall BLE Integration
 
-This project covers Bluetooth Low Energy (BLE) integration into the soccer wall. Features include sending / receiving data with a phone app, error / missing packet detection and queues that hold 60 objects each.
+This project covers Bluetooth Low Energy (BLE) integration into the wall. Features include sending / receiving data with a phone app, error / missing packet detection and queues that hold 60 objects each.
 
 Code will first check to see if phone has sent data and if so will decode + send ack back to phone. It will then check to see if there is any new HitData or LogData to send along with checking the queues to see if any old data needs to be sent. The queue logic works so that it needs an ack back for each packet (HitData or LogData) before sending a new one. This ensures that the phone receives 100% of the transmitted data.
 
@@ -42,8 +42,6 @@ To remove test code used for the phone / wall test set, simply remove the sectio
 ## Notes
 
 STM Real Time Clock (RTC) is set up in the code (minus commented out lines) but was returning zero values from **getTimeSeconds()**. When the RTC is working the timeStamp variable can be populated with a time stamp in seconds.
-
-Keil project file dump can be found in DASO google drive "PROJECTS/BLE Code Integration/BLEwall_Keil_Project_Files.7z". Might need it for some header files that live in "./Inc/".
 
 To modify HitDataBLE or LogDataBLE:
 
